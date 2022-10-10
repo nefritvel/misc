@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Slab:wght@400;600;900&display=swap');
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: #333745;
+    font-family: 'Roboto Mono', monospace;
+    color: #EEF5DB;
+}
+
+main {
+    margin: 0 auto;
+    padding: 10px;
+    max-width: 1000px;
+}
+
+section::before,
+section::after {
+    display: table;
+    content: ' ';
+    clear: both;
+}
+
+.one,
+.one-third,
+.two-thirds,
+.one-fourth,
+.half {
+    width: 90%;
+    margin: 10px;
+}
+
+a {
+    color: rgb(252, 109, 98);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+a:hover {
+    color: rgb(224, 205, 205);
+    text-decoration: none;
+}
+
+header {
+    text-align: center;
+}
+
+nav {
+    padding: 0.5rem 0rem;
+}
+
+nav li {
+    display: inline-block;
+    font-size: 1em;
+}
+
+nav a {
+    padding: 0.5rem 1rem;
+    background-color: #5b5f6e;
+    transition: background-color .5s, color .2s;
+}
+
+nav a:hover {
+    text-decoration: none;
+    text-shadow: 0 0 3px rgb(224, 205, 205);
+    transition: background-color .5s, color .2s text-shadow .2s;
+}
+
+h1 {
+    font-size: 1.5rem;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 1.4rem;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 1.1rem;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 600;
+}
+
+button {
+    color: #fff;
+    background-color: rgb(37, 39, 43);
+    border: none;
+    border-radius: 15px;
+    padding: 0.5rem;
+}
+
+button:hover {
+    color: rgb(185, 202, 195);
+    background-color: #202225;
+    border: none;
+    border-radius: 15px;
+    padding: 0.5rem;
+}
+
+
+/* GEM GENERATOR SPECIFIC */
+
+#generatorContent {
+    text-align: center;
+}
+
+#gemGenResult {
+    background-color: rgb(255, 255, 255, 0.1);
+    height: 5rem;
+    margin: 1em;
+    font-weight: 700;
+    line-height: 5rem;
+    font-size: 1.5rem;
+    text-shadow: 0 0 8px rgb(224, 205, 205);
+}
+
+#prevResults {
+    background-color: rgb(255, 255, 255, 0.1);
+    height: 50%;
+    overflow: auto;
+    padding: 1em 0em;
+}
+
+#prevResults li {
+    display: block;
+    line-height: 1.5rem;
+}
+
+@media screen and (min-width: 800px) {
+    .one {
+        width: 90%;
+    }
+    .half {
+        width: calc(90% / 2);
+    }
+    .one-third {
+        width: calc(90% / 3);
+    }
+    .one-fourth {
+        width: calc(90% / 4);
+    }
+    .two-thirds {
+        width: calc(90% / 3 * 2);
+    }
+    .column {
+        float: left;
+        padding: 1rem;
+    }
+}

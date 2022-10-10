@@ -1,0 +1,78 @@
+@font-face {
+    font-family: 'monochrome';
+    src: url('./fonts/ecran-monochrome---monochrome-display-webfont.woff2') format('woff2'), url('./fonts/ecran-monochrome---monochrome-display-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'monotonelight';
+    src: url('./fonts/monotone-webfont.woff2') format('woff2'), url('./fonts/monotone-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TIFAX';
+    src: url('./fonts/TIFAX-Alpha.woff2') format('woff2'), url('./fonts/TIFAX-Alpha.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'TIFAX';
+    background-color: #222;
+    color: #ddd;
+    margin: 1em;
+}
+
+a {
+    font-weight: bold;
+    color: rgb(185, 113, 85);
+    text-decoration: none;
+    border-bottom: solid 0.5px rgb(185, 113, 85);
+}
+
+a:hover {
+    color: rgb(224, 145, 114);
+    border-bottom: solid 1.5px rgb(185, 113, 85);
+}
+
+li {
+    display: block;
+    padding: 0.75em;
+}
+
+h1 {
+    font-family: 'monochrome';
+    font-weight: normal;
+    font-size: 3em;
+}
+
+h2 {
+    font-family: 'monotonelight';
+    font-weight: normal;
+    font-size: 3em;
+}
+
+.pageblock {
+    position: static;
+    padding: 2em;
+    width: 70%;
+    margin: auto;
+}
+
+#links {
+    float: left;
+    width: 25%;
+    height: 100%;
+}
+
+#write {
+    word-wrap: break-word;
+}
+
+#write li {
+    display: inline-block;
+    padding: 1em;
+}
