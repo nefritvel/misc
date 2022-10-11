@@ -67,7 +67,7 @@ let previous = [];
 document.getElementById("gemGenButton").onclick = gemGen;
 
 let displayArea = document.getElementById("gemGenResult");
-let prevDisplay = document.getElementById("prevResults")
+let prevDisplay = document.getElementById("gemPrevResults")
 
 function gemGen() {
     console.log('I was clicked');
