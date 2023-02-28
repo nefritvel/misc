@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <style>
+        body {
+            background-color:beige;
+        }
+
+        .container {
+            background-color: #fff;
+        }
+
+        #generator {
+
+        }
+
+        #result {
+            
+        }
+
+        #previous-results {
+
+        }
+   </style>
+</head>
+<body>
+    <script type="text/csv" id="un-parsed">name, type
+        Aardvark ,mammal
+        Aardwolf,mammal
+        Acouchi ,mammal
+        Addax ,mammal
+        African Buffalo  ,mammal
+        African Wild Ass ,mammal
+        African Wild Dog,mammal
+        Agouti ,mammal
+        Alpaca,mammal
+        American Black Bear,mammal
+        Amur Leopard,mammal
+        Andean Mountain Cat,mammal
+        Anoa,mammal
+        Anteater,mammal
+        Antelope,mammal
+        Arctic Fox ,mammal
+        Armadillo,mammal
+        Asian Black Bear,mammal
+        Auk,mammal
+        Aye-aye,mammal
+        Babirusa,mammal
+        Baboon,mammal
+        Badger,mammal
+        Bandicoot,mammal
+        Banteng,mammal
+        Bat,mammal
+        Bear,mammal
+        Beaver ,mammal
+        Bettong,mammal
+        Bilby ,mammal
+        Binturong,mammal
+        Bison,mammal
+        Black-footed Cat,mammal
+        Black-footed Ferret,mammal
+        Blue Sheep,mammal
+        Bobcat,mammal
+        Bongo,mammal
+        Brown Bear,mammal
+        Bull ,mammal
+        Bunny ,mammal
+        Bush Dog,mammal
+        Bushbaby,mammal
+        Camel ,mammal
+        Capybara ,mammal
+        Caracal ,mammal
+        Caribou,mammal
+        Cat ,mammal
+        Cattle ,mammal
+        Cavy ,mammal
+        Chamois  ,mammal
+        Cheetah  ,mammal
+        Chimpanzee ,mammal
+        Chinchilla ,mammal
+        Chipmunk  ,mammal
+        Civet ,mammal
+        Climbing Mouse ,mammal
+        Clouded Leopard ,mammal
+        Coati ,mammal
+        Colugo ,mammal
+        Common Genet,mammal
+        Cotton Rat ,mammal
+        Cougar ,mammal
+        Cow ,mammal
+        Coyote ,mammal
+        Coypu  ,mammal
+        Culpeo fox,mammal
+        Cuscus ,mammal
+        Dassie Rat ,mammal
+        Deer ,mammal
+        Deer Mouse ,mammal
+        Degu ,mammal
+        Dhole ,mammal
+        Dibbler ,mammal
+        Dik-dik ,mammal
+        Dingo,mammal
+        Dog  ,mammal
+        Donkey ,mammal
+        Dormouse,mammal
+        Duiker ,mammal
+        Dunnart,mammal
+        Echidna ,mammal
+        Elephant ,mammal
+        Elk ,mammal
+        Ermine ,mammal
+        Fennec Fox ,mammal
+        Ferret ,mammal
+        Fisher ,mammal
+        Fishing Cat ,mammal
+        Flat-headed Cat ,mammal
+        Fossa ,mammal
+        Fox,mammal
+        Galago ,mammal
+        Gaur ,mammal
+        Gazelle,mammal
+        Geoffroy's Cat ,mammal
+        Gerbil,mammal
+        Giant Panda,mammal
+        Gibbon ,mammal
+        Giraffe ,mammal
+        Gnu ,mammal
+        Goat,mammal
+        Gopher ,mammal
+        Goral ,mammal
+        Gorilla ,mammal
+        Greater Glider ,mammal
+        Grison ,mammal
+        Grizzly Bear ,mammal
+        Groundhog ,mammal
+        Guinea Pig ,mammal
+        Gundi ,mammal
+        Hamster ,mammal
+        Hartebeest ,mammal
+        Hedgehog ,mammal
+        Himalayan Tahr ,mammal
+        Hippopotamus,mammal
+        Horse ,mammal
+        Hutia ,mammal
+        Hyena ,mammal
+        Hyrax,mammal
+        Iberian Lynx ,mammal
+        Ibex,mammal
+        Impala ,mammal
+        Jack rabbit ,mammal
+        Jackal ,mammal
+        Jaguar ,mammal
+        Jaguarundi ,mammal
+        Jerboa ,mammal
+        Jungle Cat,mammal
+        Kangaroo ,mammal
+        Kangaroo Rat ,mammal
+        Kerodon,mammal
+        Kinkajou ,mammal
+        Klipspringer ,mammal
+        Koala ,mammal
+        Kodiak Bear ,mammal
+        Kodkod,mammal
+        Kowari ,mammal
+        Kudu ,mammal
+        Kultarr ,mammal
+        Lemming ,mammal
+        Lemur ,mammal
+        Leopard ,mammal
+        Liger ,mammal
+        Lion,mammal
+        Llama ,mammal
+        Loris,mammal
+        Lynx,mammal
+        Mammoth ,mammal
+        Maned Wolf,mammal
+        Mandrill ,mammal
+        Mara ,mammal
+        Margay,mammal
+        Markhor,mammal
+        Marmot ,mammal
+        Marsupial ,mammal
+        Mole ,mammal
+        Marten ,mammal
+        Mastodon ,mammal
+        Meerkat ,mammal
+        Mink ,mammal
+        Mole ,mammal
+        Mole Rat ,mammal
+        Mongoose ,mammal
+        Monkey ,mammal
+        Moose ,mammal
+        Mountain Goat ,mammal
+        Mountain Lion ,mammal
+        Mouse ,mammal
+        Mouse Deer ,mammal
+        Muntjac ,mammal
+        Muskox ,mammal
+        Muskrat,mammal
+        Musky Rat-Kangaroo ,mammal
+        Naked Mole-rat ,mammal
+        Numbat ,mammal
+        Nutria ,mammal
+        Ocelot,mammal
+        Okapi,mammal
+        Olingo ,mammal
+        Onager ,mammal
+        Opossum ,mammal
+        Orangutan ,mammal
+        Oryx,mammal
+        Otter,mammal
+        Paca,mammal
+        Pademelon ,mammal
+        Pallas's cat ,mammal
+        Panda ,mammal
+        Pangolin ,mammal
+        Panther,mammal
+        Peccary,mammal
+        Pig,mammal
+        Pika,mammal
+        Pizzly Bear,mammal
+        Pocket Gopher,mammal
+        Polar Bear ,mammal
+        Pony ,mammal
+        Porcupine ,mammal
+        Possum,mammal
+        Potoroo ,mammal
+        Potto ,mammal
+        Pouched Rat ,mammal
+        Prairie Dog ,mammal
+        Pronghorn ,mammal
+        Przewalski's Horse,mammal
+        Pudu,mammal
+        Puma,mammal
+        Qinling Panda ,mammal
+        Quagga,mammal
+        Quokka ,mammal
+        Quoll ,mammal
+        Rabbit ,mammal
+        Raccoon ,mammal
+        Raccoon dog,mammal
+        Rat,mammal
+        Red Panda ,mammal
+        Red River Hog ,mammal
+        Reindeer,mammal
+        Rhinoceros ,mammal
+        Ringtail ,mammal
+        Rock Hyrax,mammal
+        Rufous Rat-kangaroo,mammal
+        Saber-toothed Cat,mammal
+        Sand Cat,mammal
+        Serval,mammal
+        Sheep,mammal
+        Shrew,mammal
+        Skunk ,mammal
+        Sloth ,mammal
+        Sloth Bear ,mammal
+        Slow Loris,mammal
+        Snow Leopard ,mammal
+        Solenodon,mammal
+        Spectacled Bear,mammal
+        Spiny Mouse ,mammal
+        Spiny Rat ,mammal
+        Springhare,mammal
+        Squirrel ,mammal
+        Squirrel Glider,mammal
+        Steppe Lemming,mammal
+        Stoat,mammal
+        Sun Bear,mammal
+        Takin ,mammal
+        Tamandua ,mammal
+        Tamarin,mammal
+        Tapir,mammal
+        Tarsier ,mammal
+        Tasmanian Devil ,mammal
+        Tasmanian Wolf ,mammal
+        Tayra,mammal
+        Tenrec,mammal
+        Tiger,mammal
+        Tigon,mammal
+        Treeshrew,mammal
+        Vicuna,mammal
+        Viscacha,mammal
+        Vole,mammal
+        Wallaby,mammal
+        Wapiti,mammal
+        Warthog,mammal
+        Water Buffalo,mammal
+        Weasel,mammal
+        Whistler,mammal
+        Wildcat ,mammal
+        Wildebeest ,mammal
+        Wolf ,mammal
+        Wolverine ,mammal
+        Wombat ,mammal
+        Wongai Ningaui,mammal
+        Xerus,mammal
+        Yak ,mammal
+        Yapok,mammal
+        Zebra ,mammal
+        Zebu,mammal
+        Reptiles,reptile
+        Agama,reptile
+        Alligator,reptile
+        Anaconda,reptile
+        Anole,reptile
+        Basilisk,reptile
+        Bearded Dragon,reptile
+        Boa,reptile
+        Chameleon,reptile
+        Cobra,reptile
+        Copperhead,reptile
+        Death Adder,reptile
+        Garter Snake,reptile
+        Gecko,reptile
+        Giant Tortoise,reptile
+        Gila Monster,reptile
+        Green Iguana,reptile
+        Iguana,reptile
+        King CObra,reptile
+        Komodo Dragon,reptile
+        Lizard,reptile
+        Mamba,reptile
+        Monitor Lizard,reptile
+        Pogona,reptile
+        Puff Adder,reptile
+        Python,reptile
+        Rattlesnake,reptile
+        Skink,reptile
+        Snake,reptile
+        Tortoise,reptile
+        Tuatara,reptile
+        Viper,reptile
+        Ant,bug
+        Bee,bug
+        Beetle,bug
+        Butterfly,bug
+        Caterpillar,bug
+        Centipede,bug
+        Cicada,bug
+        Crane Fly,bug
+        Cricket,bug
+        Dragonfly,bug
+        Flea,bug
+        Fly,bug
+        Grasshopper,bug
+        Hissing Cockroach,bug
+        Hornet,bug
+        Hoverfly,bug
+        Insect,bug
+        Ladybug,bug
+        Millipede,bug
+        Mosquito,bug
+        Moth,bug
+        Praying Mantis,bug
+        Scorpion,bug
+        Spider,bug
+        Stick bug,bug
+        Tarantula,bug
+        Termite,bug
+        Wasp,bug
+        Widow Spider,bug
+        Worm,bug
+        Accentor,bird
+        Albatross,bird
+        American Sparrow,bird
+        Anhinga,bird
+        Avocet,bird
+        Bald Eagle,bird
+        Barbet,bird
+        Bee-eater,bird
+        bird,bird
+        bird-of-paradise,bird
+        Bittern,bird
+        Bluebird,bird
+        Booby,bird
+        Bowerbird,bird
+        Broadbill,bird
+        Budgerigar,bird
+        Bulbul ,bird
+        Bunting,bird
+        Bushshrike  ,bird
+        Bustard,bird
+        Buzzard,bird
+        Caracara  ,bird
+        Cardinal,bird
+        Cassowary ,bird
+        Chicken,bird
+        Chough,bird
+        Climbing Perch,bird
+        Cockatiel ,bird
+        Cockatoo,bird
+        Coot,bird
+        Cormorant ,bird
+        Cotinga,bird
+        Courser,bird
+        Crane,bird
+        Crow ,bird
+        Cuckoo,bird
+        Curlew,bird
+        Dipper,bird
+        Dodo,bird
+        Dove,bird
+        Duck,bird
+        Eagle,bird
+        Egret,bird
+        Eider,bird
+        Elephant bird ,bird
+        Falcon,bird
+        Finch,bird
+        Flamingo,bird
+        Flowerpecker,bird
+        Frigatebird,bird
+        Frogmouth,bird
+        Fulmar,bird
+        Gallinule ,bird
+        Gannet,bird
+        Goose,bird
+        Grackle,bird
+        Grebe,bird
+        Grouse,bird
+        Gull,bird
+        Harrier,bird
+        Helmetshrike,bird
+        Heron,bird
+        Honeyeater ,bird
+        Hornbill ,bird
+        Hummingbird ,bird
+        Ibis ,bird
+        Icterid,bird
+        Jacana,bird
+        Jay,bird
+        Kestrel,bird
+        Kingbird ,bird
+        Kingfisher ,bird
+        Kite,bird
+        Kiwi,bird
+        Kookaburra,bird
+        Lapwing,bird
+        Long-Tailed Tit ,bird
+        Longspur ,bird
+        Loon ,bird
+        Lory,bird
+        Lovebird,bird
+        Lyrebird,bird
+        Macaw ,bird
+        Magpie ,bird
+        Mallard ,bird
+        Manakin,bird
+        Meadowlark,bird
+        Megapode,bird
+        Mockingbird,bird
+        Moorhen,bird
+        Motmot,bird
+        Mousebird,bird
+        Nighthawk ,bird
+        Nightjar ,bird
+        Nuthatch,bird
+        Old World Babbler ,bird
+        Old World Flycatcher ,bird
+        Oriole,bird
+        Osprey  ,bird
+        Ostrich  ,bird
+        Ovenbird  ,bird
+        Owl  ,bird
+        Parakeet  ,bird
+        Parrot  ,bird
+        Passenger Pigeon  ,bird
+        Peacock  ,bird
+        Peafowl  ,bird
+        Pelican,bird
+        Penguin,bird
+        Pheasant,bird
+        Pigeon,bird
+        Pitohui,bird
+        Plover,bird
+        Potoo,bird
+        Ptarmigan,bird
+        Puffin,bird
+        Quail,bird
+        Quetzal,bird
+        Rail,bird
+        Raven,bird
+        Rhea,bird
+        Roadrunner  ,bird
+        Robin  ,bird
+        Roller  ,bird
+        Rook  ,bird
+        Sandgrouse  ,bird
+        Shearwater,bird
+        Shelduck  ,bird
+        Shoebill  ,bird
+        Skimmer,bird
+        Skua,bird
+        Snipe,bird
+        Songbird  ,bird
+        Sparrow  ,bird
+        Spoonbill  ,bird
+        Staring,bird
+        Stone-curlew  ,bird
+        Stork,bird
+        Sunbird,bird
+        Swallow  ,bird
+        Swamphen  ,bird
+        Swan  ,bird
+        Swift  ,bird
+        Tanager  ,bird
+        Tapaculo  ,bird
+        Tern,bird
+        Thick-knee  ,bird
+        Thornbill  ,bird
+        Thrasher  ,bird
+        Thrush  ,bird
+        Tit,bird
+        Toucan,bird
+        Trogon,bird
+        Trumpeter,bird
+        Turaco  ,bird
+        Turkey  ,bird
+        Tyrant Flycatcher  ,bird
+        Vanga,bird
+        Vulture,bird
+        Wader  ,bird
+        Wagtail  ,bird
+        Warbler,bird
+        Waxwing,bird
+        Weaver-finch  ,bird
+        Whistling Duck  ,bird
+        White-eye  ,bird
+        Whydah  ,bird
+        Wigeon,bird
+        Woodchuck  ,bird
+        Woodcock  ,bird
+        Woodpecker  ,bird
+        Woodswallow  ,bird
+        Wren,bird
+        Xenops,bird
+        Yapok,bird
+        Anemone    ,aquatic
+        Angelfish    ,aquatic
+        Archerfish,aquatic
+        Arowana,aquatic
+        Axolotl,aquatic
+        Batfish,aquatic
+        Betta,aquatic
+        Bitterling,aquatic
+        Blue Whale,aquatic
+        Bullfrog,aquatic
+        Cardinalfish,aquatic
+        Carp,aquatic
+        Catfish,aquatic
+        Chimaera,aquatic
+        Cichlid,aquatic
+        Clam,aquatic
+        Clownfish,aquatic
+        Cocant,aquatic
+        Conch,aquatic
+        Crab,aquatic
+        Crayfish,aquatic
+        Crocodile,aquatic
+        Cuttlefish,aquatic
+        Dartfish,aquatic
+        Discus,aquatic
+        Dolphin,aquatic
+        Dugong,aquatic
+        Eagle Ray,aquatic
+        Eel,aquatic
+        Electric Eel    ,aquatic
+        Electric Ray ,aquatic
+        Fish,aquatic
+        Flying Fish    ,aquatic
+        Flying Frog,aquatic
+        Frog,aquatic
+        Gar,aquatic
+        Goatfish    ,aquatic
+        Goldfish ,aquatic
+        Gourami,aquatic
+        Hermit Crab,aquatic
+        Jellyfish ,aquatic
+        Knifefish ,aquatic
+        Koi ,aquatic
+        Lamprey,aquatic
+        Leech,aquatic
+        Lionfish,aquatic
+        Loach,aquatic
+        Lobster,aquatic
+        Manatee,aquatic
+        Manta Ray    ,aquatic
+        Mantis Shrimp,aquatic
+        Marine Angelfish    ,aquatic
+        Marine Hatchetfish,aquatic
+        Marlin  ,aquatic
+        Minnow ,aquatic
+        Moray Eel,aquatic
+        Mudpuppy    ,aquatic
+        Mudskipper    ,aquatic
+        Mullet,aquatic
+        Narwhal    ,aquatic
+        Nautilus    ,aquatic
+        Needlefish    ,aquatic
+        Newt ,aquatic
+        Octopus,aquatic
+        Orca,aquatic
+        Otter,aquatic
+        Oyster,aquatic
+        Paddlefish,aquatic
+        Parrotfish,aquatic
+        Penguin,aquatic
+        Pike,aquatic
+        Platypus,aquatic
+        Poison Dart Frog,aquatic
+        Porpoise,aquatic
+        Prawn,aquatic
+        Puffer Fish,aquatic
+        Rainbowfish,aquatic
+        River Dolphin,aquatic
+        Rockfish,aquatic
+        Sailfish,aquatic
+        Salamander,aquatic
+        Salmon,aquatic
+        Sawfish,aquatic
+        Sea Anemone    ,aquatic
+        Sea Cucumber ,aquatic
+        Sea Lion    ,aquatic
+        Sea Otter    ,aquatic
+        Sea Snake    ,aquatic
+        Seadragon    ,aquatic
+        Seahorse    ,aquatic
+        Seal ,aquatic
+        Shark,aquatic
+        Shrimp    ,aquatic
+        Skate ,aquatic
+        Slug    ,aquatic
+        Snail,aquatic
+        Spiny Lobster,aquatic
+        Sponge,aquatic
+        Squid,aquatic
+        Starfish,aquatic
+        Stingray,aquatic
+        Stonefish,aquatic
+        Surgeonfish,aquatic
+        Swordfish,aquatic
+        Tadpole,aquatic
+        Tarpon,aquatic
+        Tetra,aquatic
+        Toad,aquatic
+        Toadfish,aquatic
+        Tuna,aquatic
+        Turtle,aquatic
+        Urchin,aquatic
+        Vaquita,aquatic
+        Walleye    ,aquatic
+        Walrus ,aquatic
+        Whale,aquatic
+    
+    </script>
+
+    <div class="container">
+        <div id="generator">
+            Categories to include: <br>
+            <input type="checkbox" id="mammal" name="mammal" value="Mammals" Checked onclick="getCategories(this)">
+            <label for="mammal"> Mammals</label><br>
+            <input type="checkbox" id="reptile" name="reptile" value="Reptiles" Checked onclick="getCategories(this)">
+            <label for="reptile"> Reptiles</label><br>
+            <input type="checkbox" id="bug" name="bug" value="Bugs" Checked onclick="getCategories(this)">
+            <label for="bug"> Bugs</label><br> 
+            <input type="checkbox" id="bird" name="bird" value="Birds" Checked onclick="getCategories(this)">
+            <label for="bird"> Birds</label><br> 
+            <input type="checkbox" id="aquatic" name="aquatic" value="Aquatics" Checked onclick="getCategories(this)">
+            <label for="aquatic"> Aquatics</label><br> 
+
+            <button onclick="rollRandomAnimal()">Role An Animal</button>
+
+            <div id="result"></div>
+        </div>
+
+        <div>
+            Previous results:
+            <ul id="previous-results"></ul>
+        </div>
+
+        <div class="right-sidebar">
+            <div>
+                <button onclick="showPossibleResults()">Show All Possible Results</button>
+                <ol id="possible-results"></ol>
+            </div>
+        </div>
+    </div>
+    
+   <script>
+        const categoriesToInclude = [];
+        const allAnimals = parseData();
+
+        const mammalsCheckbox = document.getElementById('mammal');
+        const reptilesCheckbox = document.getElementById('reptile');
+        const bugsCheckbox = document.getElementById('bug');
+        const birdsCheckbox = document.getElementById('bird');
+        const aquaticsCheckbox = document.getElementById('aquatic');
+
+        const previousResults = document.getElementById('previous-results');
+        const possibleResults = document.getElementById('possible-results');
+
+        mammalsCheckbox.checked = true;
+        reptilesCheckbox.checked = true;
+        bugsCheckbox.checked = true;
+        birdsCheckbox.checked = true;
+        aquaticsCheckbox.checked = true;
+
+        const displayResult = document.getElementById('result');
+
+        if (categoriesToInclude.length == 0) {
+            categoriesToInclude.push(mammalsCheckbox.name);
+            categoriesToInclude.push(reptilesCheckbox.name);
+            categoriesToInclude.push(bugsCheckbox.name);
+            categoriesToInclude.push(birdsCheckbox.name);
+            categoriesToInclude.push(aquaticsCheckbox.name);
+        }
+
+        function parseData() {
+            const unparsed = document.getElementById('unparsed').text;
+            const rows = unparsed.split('\n');
+            const data = [];
+
+            rows.forEach((rowString) => {
+                let row = [];
+                if(rows.indexOf(rowString) > 0) {
+                    rowString.split(',').forEach((item) => {
+                        row.push(item.trim());
+                    });
+                    let animal = {
+                        name: row[0],
+                        category: row[1]
+                    }
+                    data.push(animal);
+                }
+            });
+            return data;
+        }
+
+        function getCategories(category) {
+            console.log()
+            if(category !== undefined) {
+                let index = categoriesToInclude.indexOf(category.name);
+                console.log('before change', categoriesToInclude);
+                category.checked ? categoriesToInclude.push(category.name) : categoriesToInclude.splice(index, 1);
+                console.log('after change', categoriesToInclude);
+            }
+        }
+
+        function getAnimalsToUse() {
+            let animalsToUse = [];
+            allAnimals.forEach((animal) => {
+                categoriesToInclude.forEach((category) => {
+                    if(animal.category == category) {
+                        animalsToUse.push(animal);
+                    }
+                })
+            })
+
+            return animalsToUse;
+        }
+
+        function showPossibleResults() {
+            let animalsList = '';
+            let animalsToUse = getAnimalsToUse();
+            animalsToUse.forEach((animal) => {
+                animalsList += `<li>${animal.name} <i>[${animal.category}]</i></li>`;
+            })
+            possibleResults.innerHTML = animalsList;
+        }
+
+        function rollRandomAnimal() {
+            if(displayResult.innerHTML.length > 0) {
+                previousResults.innerHTML += `<li>${displayResult.innerHTML}</li>`;
+            }
+            let animalsToUse = getAnimalsToUse();
+            let index = Math.floor(Math.random() * animalsToUse.length);
+            console.log(index);
+            console.log('categories used',categoriesToInclude);
+            console.log('possible results',animalsToUse);
+            console.log('result',animalsToUse[index]);
+            myAnimal = animalsToUse[index];
+            displayResult.innerHTML = `${myAnimal.name} <i>[${myAnimal.category}]</i>`;
+        }
+
+    </script>
+
+
+
+
+</body>
+</html>
